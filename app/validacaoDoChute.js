@@ -15,7 +15,7 @@ function verificaSeChuteFoiValido(numero){
         elementoChute.innerHTML += `
         <h2> Parabéns, você acertou!</h2>
         <h3>O número secreto era ${numero}</h3>
-        <buton id="jogar-novamente" class="btn-jogar">Jogar novamente</buton>
+        <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
         `
     }else if(numero > numeroSecreto){
         elementoChute.innerHTML += `
