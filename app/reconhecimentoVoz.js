@@ -11,6 +11,7 @@ recognition.addEventListener('result', onSpeak)
 function onSpeak(e){
     chute = e.results[0][0].transcript // salva o valor do chute registrado na variável chute
     exibeChuteNaTela(chute)
+    verificaSeChuteFoiValido(chute)
 
     console.log(e.results[0][0].transcript)
     //o primeiro array pega a taxa de confiabilidade, o segundo o que foi dito
@@ -26,4 +27,6 @@ function exibeChuteNaTela(chute){
     //enquanto não registrado um número ditado a div fica oculta
 
 }
+
+recognition.addEventListener('end', () => recognition.star())//reinicia a escuta após o término da instrução
     
