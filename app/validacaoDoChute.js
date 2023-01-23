@@ -15,6 +15,7 @@ function verificaSeChuteFoiValido(numero){
         elementoChute.innerHTML += `
         <h2> Parabéns, você acertou!</h2>
         <h3>O número secreto era ${numero}</h3>
+        <buton id="jogar-novamente" class="btn-jogar">Jogar novamente</buton>
         `
     }else if(numero > numeroSecreto){
         elementoChute.innerHTML += `
@@ -35,3 +36,10 @@ function verificaSeEhNumero(numero){
 function verifcaSeNumeroEstaDentroDoPermitido(numero){
     return numero > maiorValor || numero < menorValor;//retorna 'true' para número maior que maiorValor e menor que menorValor
 }
+
+document.body.addEventListener('click', e => {
+    //busca o evento clique com o id 'jogar-novamente'
+    if(e.target.id == "jogar-novamente"){
+        window.location.reload()
+    }
+})
